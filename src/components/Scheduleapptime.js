@@ -4,6 +4,7 @@ import rrdoc1 from "../images/rrdoc1.png";
 import dates from "../images/Dates.png";
 
 import { TimePickerComponent } from "@syncfusion/ej2-react-calendars";
+import { NavLink } from "react-router-dom";
 
 const Scheduleapptime = () => {
 
@@ -66,7 +67,7 @@ max={maxTime} */}
 
             <div className="btnssec">
               <button className="backbtn">Back</button>
-              <button className="nextbtn">Next Step</button>
+    <NavLink to="/patient"> <button className="nextbtn">Next Step</button></NavLink>  
             </div>
           </div>
 

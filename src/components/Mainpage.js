@@ -9,8 +9,16 @@ import doc7 from "../images/doc7.png";
 import doc8 from "../images/doc8.png";
 import rdoc1 from "../images/rdoc1.png";
 import rrdoc1 from "../images/rrdoc1.png";
+import updown from "../images/updown.png";
+import { NavLink } from "react-router-dom";
+import gpdoc1 from "../images/gpdoc1.png";
+import gpdoc2 from "../images/gpdoc2.png";
+import gpdoc3 from "../images/gpdoc3.png";
+
 
 const Mainpage = () => {
+
+
   return (
     <>
       <div className="container-fluid">
@@ -25,19 +33,76 @@ const Mainpage = () => {
               </div>
 
               <div className="maininp">
+             
                 <div>
                   <p>Specialist Name</p>
+
                   <input className="inpdoc" placeholder="Select A doctor" />
+                  <img style={{marginTop:"-60px", marginLeft:"370px"}} src={updown}/>
+                 
+<div className="dropdown">
+
+<div className="select">
+  <div className="caret"></div>
+
+</div>
+
+
+                  <ul className="menu" style={{marginRight:"20px"}}>
+                  <li>
+                    <div style={{display:"flex"}}>
+                      <img src={gpdoc1} style={{borderRadius:"100%", height:"50px", width:"50px"}}/>
+                      <div style={{marginLeft:"10px"}}>
+                      <h6>Emma Waston</h6>
+                      <p>GP Doctor</p>
+                      </div>
+                     
+                    </div>
+                  </li>
+                  <li>
+                  <div style={{display:"flex"}}>
+                      <img src={gpdoc2} style={{borderRadius:"100%", height:"50px", width:"50px"}}/>
+                      <div style={{marginLeft:"10px"}}>
+                      <h6>Anna Karenina</h6>
+                      <p>GP Doctor</p>
+                      </div>
+                     
+                    </div>                 
+                     </li>
+
+                    <li>
+                  <div style={{display:"flex"}}>
+                      <img src={gpdoc3} style={{borderRadius:"100%", height:"50px", width:"50px"}}/>
+                      <div style={{marginLeft:"10px"}}>
+                      <h6>John Lee</h6>
+                      <p>GP Doctor</p>
+                      </div>
+                     
+                    </div>                  
+                    </li>
+                </ul>
+
+
+
+ </div>  
+{/* // This is dropdown first div end  */}
+
+
+
                 </div>
 
                 <div>
                   <p>Department</p>
-                  <input
-                    className="inpdoc"
-                    style={{ marginLeft: "10px" }}
-                    placeholder="GP Department"
-                  />
+
+                  <div >
+                  <input className="inpdoc" style={{ marginLeft: "10px" }} placeholder="GP Department"/>
+                  <img style={{marginTop:"-60px", marginLeft:"380px"}} src={updown}/>
+                  </div>
+
                 </div>
+            
+            
+            
               </div>
 
               <h3
@@ -94,7 +159,11 @@ const Mainpage = () => {
 
             <div className="btnssec">
               <button className="backbtn">Back</button>
-              <button className="nextbtn">Next Step</button>
+
+              <div>
+              <button className="nextbtn btn10">Next Step</button>
+
+              </div>
             </div>
           </div>
 
@@ -106,7 +175,7 @@ const Mainpage = () => {
               <img style={{ width: "100%" }} src={rdoc1} />
             </div>
 
-            <div className="rightspecialdoc" style={{marginTop:"30px"}}>
+            <div className="rightspecialdoc" style={{marginTop:"55px"}}>
               <div className="specialdoc">
                 <h5>Patient Profile</h5>
               </div>

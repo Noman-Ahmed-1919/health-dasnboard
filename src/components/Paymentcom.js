@@ -5,6 +5,7 @@ import payround from "../images/payround.png";
 import payround1 from "../images/payround2.png";
 import pdf from "../images/pdf.png";
 import print from "../images/print.png";
+import { NavLink } from "react-router-dom";
 
 
 const Paymentcom = () => {
@@ -44,7 +45,7 @@ const Paymentcom = () => {
 </div>
 
 <div style={{display:"flex"}}>
-    <button className="printbtn"><img src={print} style={{marginRight:"10px"}}/> 
+    <button className="printbtn"><img src={print}  style={{marginRight:"10px"}}/> 
  Print</button>
 
 </div>      
@@ -60,7 +61,7 @@ const Paymentcom = () => {
 
             <div className="btnssec">
               <button className="backbtn">Back</button>
-              <button className="nextbtn">Next Step</button>
+       <NavLink to="/paymentcomplete">  <button className="nextbtn">Next Step</button></NavLink> 
             </div>
           </div>
 

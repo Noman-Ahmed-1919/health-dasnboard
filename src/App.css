@@ -49,7 +49,7 @@ padding-right: 10px;
   padding-top: 15px;
   padding-bottom: 15px;
   border: 1px solid rgba(216, 226, 238, 1);
-  margin-left: 35px;
+  margin-left: 3p0x;
 
 }
 .sub-header{
@@ -95,7 +95,7 @@ ul li ul.dropdown {
 }
 
 ul li:hover ul.dropdown {
-  display: block;
+  display: contents;
 }
 
 
@@ -161,6 +161,11 @@ border-radius: 10px;
 
 }
 
+#loginmaindiv{
+  background-color: #000;
+
+}
+
 .thirddiv{
   margin-top: 20px;
   background-color: white;
@@ -193,7 +198,10 @@ margin-right: 15px;
   border-radius: 05px;
 
 }
+.backbtn1:hover{
+  background-color: rgba(54, 58, 96, 1);
 
+}
 
 .nextbtn1{
   background-color: rgba(54, 58, 96, 1);
@@ -202,16 +210,67 @@ margin-right: 15px;
   border: none;
   border-radius: 05px;
 }
-
-
-
-.nextbtn{
+.nextbtn1:hover{
 
   background-color: rgba(0, 190, 174, 1);
+  /* border: 1px solid black; */
+  color: black;
+  border-radius: 5px;
+}
+
+.nextbtn:hover{
+  background-color: rgba(54, 58, 96, 1);
+  /* border: 1px solid black; */
   color: white;
+}
+
+.nextbtn{
+background: none;
+  background-color: rgba(0, 190, 174, 1);
   padding: 03px 30px;
   border: none;
+  cursor: pointer;
+  transition: color 0.4s linear;
+  position: relative;
+  overflow: hidden;
 }
+
+
+
+.btn10{
+  color: white;
+}
+.btn10:hover{
+  color: black;
+  background-color: rgba(54, 58, 96, 1);
+  /* border: 1px solid black; */
+  color: white;
+
+}
+.nextbtn::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition:  transform 0.5s;
+  transform-origin: 0 0;
+  transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+  
+}
+.btn10::before{
+  transform: scaleX(0);
+  
+}
+.btn10:hover::before{
+  transform: scaleX(1);
+  /* height: 180%; */
+
+}
+
+
+
 
 .btnssec{
   background-color: white;
@@ -344,7 +403,18 @@ border-radius: 10px;
   padding-bottom: 10px;
   border-radius: 05px;
 }
+.editbtn:hover{
+  background-color: rgba(0, 190, 174, 1);
 
+}
+
+.bank{
+  width: "70%";
+  height: "70%" 
+}
+.bank:hover{
+  width: 71%;
+}
 
 .emailh6{
   margin-top: 20px;
@@ -429,7 +499,10 @@ justify-content: space-between;
   padding-right: 40px;
   padding-left: 40px;
 }
+.pdfbtn1:hover{
+  background-color: rgba(0, 190, 174, 1);
 
+}
 .printbtn{
   width: 100%;
   border: 1px solid gray;
@@ -439,6 +512,13 @@ padding-right: 120px;
 padding-left: 120px;
   
 }
+.printbtn:hover{
+
+  background-color: rgba(54, 58, 96, 1);
+
+
+}
+
 
 #pdfprintbtn{
   display: flex;
@@ -492,4 +572,149 @@ padding-left: 120px;
 
 .note{
   padding-left: 15px;
+}
+
+
+
+
+/* Now here start from dropdown css */
+
+.menu{
+list-style: none;
+padding: 0.2em 0.5em;
+background-color: white;
+border: 1px solid #363a43;
+box-shadow: 0 0.5em 1em rgb(0, 0, 0,0.2);
+border-radius: 0.5em;
+position: absolute;
+top: 3em;
+left: 50%;
+width: 100%;
+transform: translateX(-50%);
+opacity: 0;
+display: none;
+transition: 0.2s;
+z-index: 1;
+}
+
+.menu li{
+  cursor: pointer;
+  margin: 10px 10px;
+  padding: 10px 10px;
+}
+
+.menu-open{
+  display: block;
+  opacity: 1;
+}
+.mainchart{
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+.mainchart2{
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 40px;
+  height: 200px;
+}
+
+.mainchart3{
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 40px;
+  height: 260px;
+}
+
+
+
+.logininp{
+  border-radius: 10px;
+  border: 1px solid gray;
+  padding-top: 07px;
+  padding-bottom: 07px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 400px;
+
+}
+
+.loginlogo{
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 20%;
+  left: 50%;
+}
+
+
+.mainlogininput{
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+}
+
+
+.loginbtn{
+
+border-radius: 10px;
+padding: 05px 32px;
+margin-top: 25px;
+text-align: center;
+border: 1px solid gray;
+background-color: transparent;
+
+}
+
+
+.loginbtn:hover{
+
+background-color: white;
+
+
+}
+
+
+.calendarinp{
+  /* text-align: center; */
+ 
+
+}
+.inpcal{
+  padding-top: 05px !important;
+  padding-bottom: 05px !important;
+  border-radius: 05px;
+  border: 1px solid gray;
+  margin-top: 20px;
+  width: 43 0px;
+
+}
+
+.datestart{
+  padding-top: 05px !important;
+  padding-bottom: 05px !important;
+  border-radius: 05px;
+  border: 1px solid gray;
+  margin-top: 10px;
+  padding-left: 10px;
+
+}
+
+.dateend{
+  padding-top: 05px !important;
+  padding-bottom: 05px !important;
+  border-radius: 05px;
+  border: 1px solid gray;
+  margin-top: 10px;
+  padding-left: 10px;
+
+}
+
+.react-datepicker-wrapper {
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  width: 18% !important;
 }

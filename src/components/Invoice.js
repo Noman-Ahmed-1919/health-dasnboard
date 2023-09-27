@@ -2,7 +2,31 @@ import React from "react";
 import pdf from "../images/pdf.png";
 import order from "../images/order.png";
 
+
+const PNG_FILE_URL = 'http://localhost:3000/invoice/pdf.pdf'
+
 const Invoice = () => {
+
+
+
+const downloadFileAtURL=(url)=>{
+
+fetch(url)
+.then((response) => response.blob())
+.then((blob) => {
+const blobURL = window.URL.createObjectURL(new Blob)  
+const fileName = url.split("/").pop();
+const aTag = document.createElement("a");
+aTag.href = blobURL;
+aTag.setAttribute("download", fileName);
+document.body.appendChild(aTag);
+aTag.click();
+aTag.remove();
+});
+};
+
+
+
   return (
     <>
       <div className="container-fluid">
@@ -13,7 +37,7 @@ const Invoice = () => {
                 <h6 style={{ paddingTop: "5px" }}>Order #AD202294</h6>
 
                 <div style={{ display: "flex" }}>
-                  <button className="pdfbtn1">
+                  <button className="pdfbtn1" onClick={()=>{downloadFileAtURL(PNG_FILE_URL)}}>
                     <img src={pdf} style={{ marginRight: "10px" }} />
                     Downlooad
                   </button>

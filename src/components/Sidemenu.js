@@ -14,8 +14,13 @@ import sitting from "../images/sitting.png";
 import logout from "../images/logout.png";
 import drop from "../images/dropdown.png";
 
-
 const Sidemenu = () => {
+
+
+const logoutbtn=()=>{
+  alert()
+}
+
   return (
     <>
       <div style={{ display: "flex" }}>
@@ -25,18 +30,20 @@ const Sidemenu = () => {
               style={{ height: "20px", paddingLeft: "6px", marginTop: "18px" }}
               src={dash}
             />
-            <p
+            <NavLink
               style={{
                 paddingTop: "15px",
                 paddingLeft: "8px",
                 color: "rgba(85, 26, 139)",
+                textDecoration:"none"
               }}
+              to="/mainpage"
             >
-              Dashboard{" "}
-            </p>
+              Dashboard
+            </NavLink>
           </div>
 
-          <div style={{ display: "flex", marginTop: "05px" }}>
+          <div style={{ display: "flex", marginTop: "25px" }}>
             <img
               style={{ height: "20px", paddingLeft: "6px", marginTop: "18px" }}
               src={recp}
@@ -47,17 +54,22 @@ const Sidemenu = () => {
                 paddingTop: "15px",
                 paddingLeft: "8px",
                 color: "rgba(85, 26, 139)",
+                textDecoration:"none"
               }}
             >
               Reception
             </NavLink>
           </div>
 
-          <div style={{ display: "flex" }}>
+
+
+
+          <div style={{ display: "flex", marginTop:"25px" }}>
             <img
               style={{ height: "20px", paddingLeft: "6px", marginTop: "18px" }}
               src={appointment}
             />
+
             <ul style={{ paddingLeft: "8px" }}>
               <li>
                 <div style={{ paddingTop: "15px", display: "flex" }}>
@@ -75,6 +87,7 @@ const Sidemenu = () => {
                         height: "05px",
                         paddingTop: "0px",
                         paddingLeft: "35px",
+
                       }}
                     />
                   </NavLink>
@@ -82,20 +95,24 @@ const Sidemenu = () => {
 
                 <ul
                   className="dropdown"
-                  style={{ paddingTop: "10px", paddingLeft: "10px" }}
+                  style={{ paddingTop: "0px", paddingLeft:"0px"}}
                 >
                   <li>
-                    <NavLink to="/bookappointment">
+                    <NavLink to="/bookappointment" style={{textDecoration:"none", marginTop:"20px"}}>
                       Schedule Appointment
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/calender">Calendar</NavLink>
+                    <NavLink to="/calender" style={{textDecoration:"none", marginTop:"5px"}}>Calendar</NavLink>
                   </li>
                 </ul>
               </li>
             </ul>
           </div>
+
+
+
+
 
           <div style={{ display: "flex", marginTop: "25px" }}>
             <img
@@ -130,17 +147,20 @@ const Sidemenu = () => {
                   style={{ paddingTop: "10px", paddingLeft: "10px" }}
                 >
                   <li>
-                    <NavLink to="/schuleapptime">Register Patient</NavLink>
+                    <NavLink to="/schuleapptime" style={{textDecoration:"none" , marginTop:"20px"}}>Register Patient</NavLink>
                   </li>
                   <li>
-                    <a href="#">Search Patient</a>
+                    <a style={{textDecoration:"none" , marginTop:"05px"}} href="#" >Search Patient</a>
                   </li>
                 </ul>
               </li>
             </ul>
           </div>
 
-          <div style={{ display: "flex", marginTop: "20px" }}>
+
+
+
+          <div style={{ display: "flex", marginTop: "25px" }}>
             <img
               style={{ height: "20px", paddingLeft: "6px", marginTop: "18px" }}
               src={media}
@@ -151,13 +171,18 @@ const Sidemenu = () => {
                 paddingTop: "15px",
                 paddingLeft: "8px",
                 color: "rgba(85, 26, 139)",
+                textDecoration:"none"
               }}
             >
               Media Cart
             </NavLink>
           </div>
 
-          <div style={{ display: "flex", marginTop: "10px" }}>
+
+
+
+
+          <div style={{ display: "flex", marginTop: "30px" }}>
             <img
               style={{ height: "20px", paddingLeft: "6px", marginTop: "18px" }}
               src={fin}
@@ -168,13 +193,18 @@ const Sidemenu = () => {
                 paddingTop: "15px",
                 paddingLeft: "8px",
                 color: "rgba(85, 26, 139)",
+                textDecoration:"none"
               }}
             >
               Financial
             </NavLink>
           </div>
 
-          <div style={{ display: "flex", marginTop: "15px" }}>
+
+
+
+
+          <div style={{ display: "flex", marginTop: "30px" }}>
             <img
               style={{ height: "20px", paddingLeft: "6px", marginTop: "18px" }}
               src={report}
@@ -183,8 +213,8 @@ const Sidemenu = () => {
             <ul style={{ paddingLeft: "8px" }}>
               <li>
                 <div style={{ paddingTop: "15px", display: "flex" }}>
-                  <a
-                    href="#"
+                  <NavLink
+                    to="/chart"
                     style={{
                       textDecoration: "none",
                       color: "rgba(85, 26, 139)",
@@ -199,14 +229,14 @@ const Sidemenu = () => {
                         paddingLeft: "80px",
                       }}
                     />
-                  </a>
+                  </NavLink>
                 </div>
                 <ul
                   className="dropdown"
                   style={{ paddingTop: "10px", paddingLeft: "10px" }}
                 >
                   <li>
-                    <a href="#">Insights</a>
+                    <NavLink to="/login" style={{textDecoration:"none" , marginTop:"20px"}}>Insights</NavLink>
                   </li>
                 </ul>
               </li>
@@ -244,10 +274,10 @@ const Sidemenu = () => {
                   style={{ paddingTop: "10px", paddingLeft: "10px" }}
                 >
                   <li>
-                    <a href="#">Staff List</a>
+                    <a href="#" style={{textDecoration:"none" , marginTop:"20px"}}>Staff List</a>
                   </li>
                   <li>
-                    <a href="#">Service List</a>
+                    <a href="#" style={{textDecoration:"none" , marginTop:"05px"}} >Service List</a>
                   </li>
                 </ul>
               </li>
@@ -286,10 +316,10 @@ const Sidemenu = () => {
                   style={{ paddingTop: "10px", paddingLeft: "10px" }}
                 >
                   <li>
-                    <a href="#">Organization</a>
+                    <NavLink to="/register" style={{textDecoration:"none"}}>Organization</NavLink>
                   </li>
                   <li>
-                    <a href="#">Account</a>
+                    <a href="#" style={{textDecoration:"none"}}>Account</a>
                   </li>
                 </ul>
               </li>
@@ -301,9 +331,9 @@ const Sidemenu = () => {
               style={{ height: "20px", paddingLeft: "6px", marginTop: "22px" }}
               src={logout}
             />
-            <p style={{ paddingTop: "15px", paddingLeft: "8px", color: "red" }}>
+            <Link onClick={logoutbtn} style={{ paddingTop: "15px", paddingLeft: "8px", color: "red" , textDecoration:"none"}}>
               Logout
-            </p>
+            </Link>
           </div>
         </div>
       </div>

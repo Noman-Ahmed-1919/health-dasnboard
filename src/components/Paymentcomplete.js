@@ -6,6 +6,7 @@ import payround1 from "../images/payround2.png";
 import pdf from "../images/pdf.png";
 import print from "../images/print.png";
 import tick from "../images/tick.png";
+import { NavLink } from "react-router-dom";
 
 
 const Paymentcomplete = () =>{
@@ -45,8 +46,9 @@ const Paymentcomplete = () =>{
 </div>
 
 <div style={{display:"flex"}}>
-    <button className="printbtn"><img src={print} style={{marginRight:"10px"}}/> 
- Print</button>
+  
+  <NavLink to="/invoice">  <button className="printbtn"><img src={print} style={{marginRight:"10px"}}/> 
+ Print</button> </NavLink>
 
 </div>      
         

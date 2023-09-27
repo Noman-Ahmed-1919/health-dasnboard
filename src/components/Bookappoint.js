@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 
 import patientprofile from "../images/patproimg.png";
 import axios from "axios";
+import { NavLink } from "react-router-dom";
 
 
 const Bookappoint = () => {
@@ -109,10 +110,7 @@ const getpatientdatafrombackend = () =>{  // this route is used to get the data 
 
 }
                     
-
-                   
-
-                      
+ 
 
                       </tbody>
                     </table>
@@ -122,8 +120,8 @@ const getpatientdatafrombackend = () =>{  // this route is used to get the data 
             </div>
 
             <div className="btnssec">
-              <button className="backbtn1">Register New Page</button>
-              <button className="nextbtn1">Select</button>
+      <button className="backbtn1">Doctor's Pannel's</button>
+      <NavLink to="/schuleapptime"> <button className="nextbtn1">Schedule Appointment</button></NavLink> 
             </div>
           </div>
 

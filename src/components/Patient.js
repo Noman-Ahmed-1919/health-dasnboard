@@ -35,7 +35,7 @@ const Patient = () => {
                 <img src={payment1} style={{ width: "70%", height: "70%" }} />
                 <img src={payment2} style={{ width: "70%", height: "70%" }} />
                 <img src={payment3} style={{ width: "70%", height: "70%" }} />
-                <img src={payment4} style={{ width: "70%", height: "70%" }} />
+                <img src={payment4} className="bank" style={{ width: "70%", height: "70%" }} />
                 <img src={payment5} style={{ width: "80%", height: "82%" }} />
               </div>
             </div>
@@ -43,12 +43,8 @@ const Patient = () => {
 
             <div className="btnssec">
               <button className="backbtn1">Back</button>
-              <button className="nextbtn1">
-              <NavLink to="/paymentcom">   Next Stop</NavLink>
-
-             
-                
-                </button>
+              <NavLink to="/paymentcom" style={{textDecoration:"none"}}>    
+              <button className="nextbtn1">Next Stop</button></NavLink>
             </div>
 
 

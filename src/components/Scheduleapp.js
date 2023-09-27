@@ -1,4 +1,6 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+
 
 const Scheduleapp = () => {
   return (
@@ -105,7 +107,8 @@ const Scheduleapp = () => {
 
 
             <div className="btnssec">
-              <button className="backbtn1">Register New Page</button>
+              <NavLink to="/bookappointment"><button className="backbtn1">Register New Patient</button></NavLink> 
+
               <button className="nextbtn1">Select</button>
             </div>
 
