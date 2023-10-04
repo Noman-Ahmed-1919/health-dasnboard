@@ -66,9 +66,9 @@ const Calender = () => {
 
   return (
     <>
-      <div className="container-fluid">
+      <div className="container" id="set-width" >
         <div className="row">
-          <div className="col-12">
+          <div className="col-md-12">
             <div>
                 <div className="calendarinp">
 
@@ -84,7 +84,7 @@ const Calender = () => {
               />
                 </div>
 
-<div style={{display:"flex", justifyContent:"left"}}>
+<div style={{display:"grid", justifyContent:"left"}}>
 
               <DatePicker
                 placeholderText="Start Date"

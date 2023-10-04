@@ -8,22 +8,17 @@ import print from "../images/print.png";
 import tick from "../images/tick.png";
 import { NavLink } from "react-router-dom";
 
-
-const Paymentcomplete = () =>{
-    return(
-        <>
-        
-        <div className="container-fluid">
+const Paymentcomplete = () => {
+  return (
+    <>
+      <div className="container-fluid">
         <div className="row">
-          <div className="col-md-8">
+          <div className="col-xl-8">
             <div className="rightmaindiv">
               <div className="scheduleheader">
-                
-
                 <div className="paysec11">
                   <div>
-                    <img style={{paddingTop:"20px"}} src={tick} />
-                    
+                    <img style={{ paddingTop: "20px" }} src={tick} />
                   </div>
 
                   <h3 style={{ marginTop: "60px", marginBottom: "20px" }}>
@@ -33,38 +28,37 @@ const Paymentcomplete = () =>{
 
                   <p>Amount Recived: $72.00</p>
 
-
                   <div>
+                    <div id="pdfprintbtn">
+                      <div style={{ display: "flex" }}>
+                        <button className="pdfbtn">
+                          <img src={pdf} style={{ marginRight: "10px" }} />
+                          Downlooad As PDF
+                        </button>
+                      </div>
 
+                      <div style={{ display: "flex" }}>
+                        <NavLink to="/invoice">
+                          {" "}
+                          <button className="printbtn">
+                            <img src={print} style={{ marginRight: "10px" }} />
+                            Print
+                          </button>{" "}
+                        </NavLink>
+                      </div>
+                    </div>
 
-<div id="pdfprintbtn">
-
-<div style={{display:"flex"}}>
-    <button className="pdfbtn"><img src={pdf} style={{marginRight:"10px"}} /> 
- Downlooad As PDF</button>
-
-</div>
-
-<div style={{display:"flex"}}>
-  
-  <NavLink to="/invoice">  <button className="printbtn"><img src={print} style={{marginRight:"10px"}}/> 
- Print</button> </NavLink>
-
-</div>      
-        
-</div>
-
-<p className="payp">Payment Processed Successfully, All Right reserved to Fabmedic</p>
- 
+                    <p className="payp">
+                      Payment Processed Successfully, All Right reserved to
+                      Fabmedic
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
-
-         
           </div>
 
-          <div className="col-md-4" style={{ padding: "0px" }}>
+          <div className="col-xl-4">
             <div className="rightspecialdoc">
               <div className="specialdoc">
                 <h5>Specialist doctor</h5>
@@ -81,12 +75,8 @@ const Paymentcomplete = () =>{
           </div>
         </div>
       </div>
-
-
-        
-        </>
-    )
-}
-
+    </>
+  );
+};
 
 export default Paymentcomplete;

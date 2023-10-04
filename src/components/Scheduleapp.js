@@ -7,7 +7,7 @@ const Scheduleapp = () => {
     <>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-12">
+          <div className="col-xl-12">
             <div className="rightmaindiv">
               <div className="scheduleheader">
                 <div className="firstdiv">

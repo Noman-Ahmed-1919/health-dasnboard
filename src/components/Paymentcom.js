@@ -7,13 +7,12 @@ import pdf from "../images/pdf.png";
 import print from "../images/print.png";
 import { NavLink } from "react-router-dom";
 
-
 const Paymentcom = () => {
   return (
     <>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-8">
+          <div className="col-xl-8">
             <div className="rightmaindiv">
               <div className="scheduleheader">
                 <div className="firstdiv">
@@ -34,26 +33,26 @@ const Paymentcom = () => {
                   <p>Ticket No: 072</p>
 
                   <div>
+                    <div id="pdfprintbtn">
+                      <div id="pdfff" style={{ display: "flex" }}>
+                        <button className="pdfbtn">
+                          <img src={pdf} style={{ marginRight: "10px" }} />
+                          Downlooad As PDF
+                        </button>
+                      </div>
 
+                      <div id="printt" style={{ display: "flex" }}>
+                        <button className="printbtn">
+                          <img src={print} style={{ marginRight: "10px" }} />
+                          Print
+                        </button>
+                      </div>
+                    </div>
 
-<div id="pdfprintbtn">
-
-<div style={{display:"flex"}}>
-    <button className="pdfbtn"><img src={pdf} style={{marginRight:"10px"}} /> 
- Downlooad As PDF</button>
-
-</div>
-
-<div style={{display:"flex"}}>
-    <button className="printbtn"><img src={print}  style={{marginRight:"10px"}}/> 
- Print</button>
-
-</div>      
-        
-</div>
-
-<p className="payp">Payment Processed Successfully, All Right reserved to Fabmedic</p>
- 
+                    <p className="payp">
+                      Payment Processed Successfully, All Right reserved to
+                      Fabmedic
+                    </p>
                   </div>
                 </div>
               </div>
@@ -61,11 +60,14 @@ const Paymentcom = () => {
 
             <div className="btnssec">
               <button className="backbtn">Back</button>
-       <NavLink to="/paymentcomplete">  <button className="nextbtn">Next Step</button></NavLink> 
+              <NavLink to="/paymentcomplete">
+                {" "}
+                <button className="nextbtn">Next Step</button>
+              </NavLink>
             </div>
           </div>
 
-          <div className="col-md-4" style={{ padding: "0px" }}>
+          <div className="col-xl-4" style={{ padding: "0px" }}>
             <div className="rightspecialdoc">
               <div className="specialdoc">
                 <h5>Specialist doctor</h5>

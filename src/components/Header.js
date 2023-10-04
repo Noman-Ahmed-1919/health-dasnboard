@@ -9,7 +9,7 @@ import search from "../images/search.png"
 const Header = () => {
   return (
     <>
-      <div className="header">
+      <div className="header" id="upwidth">
 
 <div className="sub-header">
 

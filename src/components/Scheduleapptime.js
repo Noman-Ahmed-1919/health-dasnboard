@@ -7,71 +7,54 @@ import { TimePickerComponent } from "@syncfusion/ej2-react-calendars";
 import { NavLink } from "react-router-dom";
 
 const Scheduleapptime = () => {
+  // const timeValue: Date = new Date("01/01/2023 08:30 AM");
 
-// const timeValue: Date = new Date("01/01/2023 08:30 AM");
-
-// const minTime = new Date("01/01/2023 09:30 AM");
-// const maxTime = new Date("01/01/2023 05:30 AM");
-
-
+  // const minTime = new Date("01/01/2023 09:30 AM");
+  // const maxTime = new Date("01/01/2023 05:30 AM");
 
   return (
     <>
-      <div className="container-fluid">
+      <div className="container" id="set-width">
         <div className="row">
-          <div className="col-md-8">
+          <div className="col-xl-8">
             <div className="rightmaindiv">
               <div className="scheduleheader">
                 <div className="firstdiv">
                   <h5>Schedule Appointment</h5>
                 </div>
 
-                <div className="maininp">
-                  <div>
-                    <p>Specialist Name</p>
-                    <input className="inpdoc" placeholder="Select A doctor" />
-                  </div>
-
-                  <div>
-                    <p>Department</p>
-                    <input
-                      className="inpdoc"
-                      style={{ marginLeft: "10px" }}
-                      placeholder="GP Department"
-                    />
-                  </div>
-                </div>
+               
               </div>
-<div className="timepicker">
-<TimePickerComponent placeholder="Select a Time" >
-
-{/* value={timeValue}
+              <div className="timepicker">
+                <TimePickerComponent placeholder="Select a Time">
+                  {/* value={timeValue}
 min={minTime}
 max={maxTime} */}
-</TimePickerComponent>
-</div>
+                </TimePickerComponent>
+              </div>
 
-<div>
-
-<img src={dates} style={{width:"100%", marginTop:"40px", marginBottom:"20px"}} />
-</div>
-
-
-
+              <div>
+                <img
+                  src={dates}
+                  style={{
+                    width: "100%",
+                    marginTop: "40px",
+                    marginBottom: "20px",
+                  }}
+                />
+              </div>
             </div>
-
-
-
-
-
 
             <div className="btnssec">
               <button className="backbtn">Back</button>
-    <NavLink to="/patient"> <button className="nextbtn">Next Step</button></NavLink>  
+              <NavLink to="/patient">
+                {" "}
+                <button className="nextbtn">Next Step</button>
+              </NavLink>
             </div>
           </div>
 
-          <div className="col-md-4" style={{ padding: "0px" }}>
+          <div className="col-xl-4" >
             <div className="rightspecialdoc">
               <div className="specialdoc">
                 <h5>Specialist doctor</h5>
@@ -83,7 +66,7 @@ max={maxTime} */}
               <div className="specialdoc">
                 <h5>Patient Profile</h5>
               </div>
-              <img style={{ width: "100%", height: "310px" }} src={rrdoc1} />
+              <img style={{ width: "100%" }} src={rrdoc1} />
             </div>
           </div>
         </div>
