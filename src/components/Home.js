@@ -9,6 +9,8 @@ import Mobilehea from "./Mobilehea";
 const Home = () => {
   return (
     <>
+    <div className="main-col-div">
+
       <Header />
       <Mobilehea/>
 
@@ -23,6 +25,8 @@ const Home = () => {
           
         </div>
       </div>
+      </div>
+
     </>
   );
 };

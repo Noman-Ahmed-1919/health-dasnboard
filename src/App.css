@@ -3,9 +3,17 @@
 
 
 .App {
+
+}
+
+.main-col-div{
   background-color: #EDF2F8;
 padding-left: 10px;
 padding-right: 10px;
+}
+
+#loginmaindiv{
+  background-color: #EDF2F8;
 height: 100vh;
 }
 .main-dashboard-sitting{
